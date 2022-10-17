@@ -8,7 +8,7 @@ function selecione(prato){
     //remover a clase corSelecionado que tinha sido marcado
     const pratoSelecionatoAntes = document.querySelector('.primeiro-prato .corSelecionado');
     const icon = document.querySelector('.primeiro-prato .icon');
-    icon.classList.remove('icon');
+    icon.classList.toggle('icon');
 
     if( pratoSelecionatoAntes !== null){
     pratoSelecionatoAntes.classList.remove('corSelecionado');
@@ -146,10 +146,8 @@ function cancela(){
 // whapp
 
 function whapp(){
-    const app = "Olá!, gostaria de fazer o pedido: \n - Prato:" + nomePrato +
-    "\n - Bebeda: "+ nomePrato2 +
-    "\n - Sobremesa: "+ nomePrato3 +
-    "\n - Total: R$ "+ total;
-    window.open(" https://wa.me/55XXXXXXXXXXX");
+    let app = `Olá!, gostaria de fazer o pedido: %0A- Prato:  ${nomePrato} %0A- Bebida: &{nomePrato2} %0A- Sobremesa: ${nomePrato3} %0A- Total: R$ ${total}`;
+    encodeURIComponent(app);
+    window.open("https:wa.me/+5533999319150?text=" + app);
 }
 

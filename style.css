@@ -170,7 +170,9 @@ h3{
 }
 
 .icon{
-    display: none;
+    display: block;
+    font-size: 22px;
+    color: #ffffff;
 }
 
 .button1-1{
@@ -180,7 +182,7 @@ h3{
 .corSelecionado{
     box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25), inset 0 0 0 5px #32b72f;
     color: #32b72f;
-    opacity: 1;
+
 }
 
 .aparece{
